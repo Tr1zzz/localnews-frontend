@@ -35,12 +35,11 @@ export default function App() {
     const onScroll = () => setShowTopBtn(window.scrollY > 400);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function onCityPick(city: CityDto) {
     setSelected(city);
-    setScope("local");             // keep local feed for a city
+    setScope("local");
     await load(city.id, 0, "local");
     scrollToTop();
   }

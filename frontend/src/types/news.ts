@@ -7,7 +7,7 @@ export type NewsItemDto = {
   isLocal: boolean;
   cityId: number | null;
   confidence: number | null;
-  decidedAt: string | null; // ISO-строка
+  decidedAt: string | null;
 };
 
 export type ClassifyResponse = {
